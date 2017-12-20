@@ -49,9 +49,11 @@ body {
   color: #fff;
   background: #EC644B;
   font-weight: bold;
+  font-size: 11px;
   padding: 5px;
   border-radius: 2px;
   text-align: center;
+  margin: 10px 0 0;
 }
 
 .main .container .login-box input {
@@ -69,6 +71,13 @@ body {
   padding: 4px 0;
   box-sizing: border-box;
   outline: none;
+}
+
+.main .container .login-box input[type="text"].invalid,
+.main .container .login-box input[type="email"].invalid,
+.main .container .login-box input[type="password"].invalid {
+  border-bottom: 2px solid #EC644B;
+  color: #EC644B;
 }
 
 .main .container .login-box .checkbox {
@@ -104,7 +113,7 @@ body {
   font-size: 20px;
 }
 
-.main .container .login-box input[type="submit"] {
+.main .container .login-box input[type="button"] {
   color: #fff;
   background: #50d0fb;
   border: none;
@@ -112,10 +121,7 @@ body {
   width: 100%;
   padding: 10px;
   cursor: pointer;
-}
-
-.main .container .login-box input[type="submit"]:disabled {
-  background: #b7b7b7;
+  outline: none;
 }
 
 .main .container .login-box .loading {

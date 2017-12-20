@@ -44,9 +44,11 @@ body
                 color: #fff
                 background: #EC644B
                 font-weight: bold
+                font-size: 11px
                 padding: 5px
                 border-radius: 2px
                 text-align: center
+                margin: 10px 0 0
 
             input
                 margin-top: 35px
@@ -62,6 +64,10 @@ body
                 padding: 4px 0
                 box-sizing: border-box
                 outline: none
+
+                &.invalid
+                    border-bottom: 2px solid #EC644B
+                    color: #EC644B
 
             .checkbox
                 margin-top: 20px
@@ -92,7 +98,7 @@ body
                         left: 1px
                         font-size: 20px
 
-            input[type="submit"]
+            input[type="button"]
                 color: #fff
                 background: $primaryColor
                 border: none
@@ -100,9 +106,7 @@ body
                 width: 100%
                 padding: 10px
                 cursor: pointer
-
-                &:disabled
-                    background: #b7b7b7
+                outline: none
 
             .loading 
                 text-align: center

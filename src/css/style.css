@@ -45,11 +45,21 @@ body {
   margin: 7px 0;
 }
 
+.main .container .login-box .error_message {
+  color: #fff;
+  background: #EC644B;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 2px;
+  text-align: center;
+}
+
 .main .container .login-box input {
   margin-top: 35px;
 }
 
 .main .container .login-box input[type="text"],
+.main .container .login-box input[type="email"],
 .main .container .login-box input[type="password"] {
   width: 100%;
   border: none;
@@ -102,6 +112,31 @@ body {
   width: 100%;
   padding: 10px;
   cursor: pointer;
+}
+
+.main .container .login-box input[type="submit"]:disabled {
+  background: #b7b7b7;
+}
+
+.main .container .login-box .loading {
+  text-align: center;
+}
+
+.main .container .login-box .loading span {
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 6px solid #50d0fb;
+  border-right-color: transparent;
+  animation: loader 1s infinite linear;
+}
+
+.main .container .login-box .loading label {
+  margin-top: 5px;
+  display: inline-block;
+  color: #50d0fb;
 }
 
 .footer {
@@ -165,6 +200,15 @@ body {
 
 .footer .container .col-25 .footer-col.present .text-centered-y h3 {
   font-weight: lighter;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @media only screen and (max-width: 1200px) {

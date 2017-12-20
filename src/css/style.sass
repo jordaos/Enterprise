@@ -40,10 +40,19 @@ body
                 text-align: center
                 margin: 7px 0
 
+            .error_message
+                color: #fff
+                background: #EC644B
+                font-weight: bold
+                padding: 5px
+                border-radius: 2px
+                text-align: center
+
             input
                 margin-top: 35px
             
             input[type="text"],
+            input[type="email"],
             input[type="password"]
                 width: 100%
                 border: none
@@ -92,6 +101,28 @@ body
                 padding: 10px
                 cursor: pointer
 
+                &:disabled
+                    background: #b7b7b7
+
+            .loading 
+                text-align: center
+
+                span
+                    display: block
+                    width: 25px
+                    height: 25px
+                    margin: 0 auto
+                    border-radius: 50% 
+                    border: 6px solid $primaryColor
+                    border-right-color: transparent
+                    animation: loader 1s infinite linear
+
+                label
+                    margin-top: 5px
+                    display: inline-block
+                    color: $primaryColor
+
+
 .footer
     background: #3da6cc
     width: 100%
@@ -132,7 +163,6 @@ body
                     bottom: 10px
 
                 &.present
-
                     .text-centered-y
                         position: absolute
                         top: 50%
@@ -145,6 +175,12 @@ body
                         h3
                             font-weight: lighter
 
+
+@keyframes loader
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
 
 @media only screen and (max-width: 1200px)
     .footer

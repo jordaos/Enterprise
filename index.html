@@ -13,12 +13,21 @@
 			<h1 class="company-name">Enter<span>prise!</span></h1>
 			<div class="login-box">
 				<h3>Login</h3>
-				<form>
-					<input type="text" placeholder="E-mail" />
-					<input type="password" placeholder="Senha" />
-					<label class="checkbox"><input type="checkbox" /> <span></span>Mantenha-me conectado</label>
-					<input type="submit" value="Entrar" />
-				</form>
+				<div ng-hide="isLoading">
+					<form name="loginForm">
+						<input type="email" placeholder="E-mail" name="email" ng-model="email" required/>
+						<input type="password" placeholder="Senha" name="password" ng-model="password" required minlength="6"/>
+						<label class="checkbox"><input type="checkbox" /> <span></span>Mantenha-me conectado</label>
+						<input type="submit" ng-click="login()" value="Entrar" ng-disabled="!loginForm.email.$valid || !loginForm.password.$valid"/>
+					</form>
+
+					<p class="error_message" ng-hide="!loginInvalid">Login e/ou senha inválido(s).</p>
+				</div>
+
+				<div ng-hide="!isLoading" class="loading">
+					<span></span>
+					<label>Carregando...</label>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -58,5 +67,6 @@
 	</div>
 
 	<script src="node_modules/angular/angular.min.js"></script>
+	<script src="src/js/scripts.js"></script>
 </body>
 </html>

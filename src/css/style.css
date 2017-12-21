@@ -66,13 +66,14 @@ html, body {
   margin: 10px 0 0;
 }
 
-.main .container .login-box input {
-  margin-top: 35px;
+.main .container .login-box .float-label {
+  position: relative;
+  margin: 30px 0;
 }
 
-.main .container .login-box input[type="text"],
-.main .container .login-box input[type="email"],
-.main .container .login-box input[type="password"] {
+.main .container .login-box .float-label input[type="text"],
+.main .container .login-box .float-label input[type="email"],
+.main .container .login-box .float-label input[type="password"] {
   width: 100%;
   border: none;
   color: #3f8ea8;
@@ -83,16 +84,33 @@ html, body {
   outline: none;
 }
 
-.main .container .login-box input[type="text"].invalid,
-.main .container .login-box input[type="email"].invalid,
-.main .container .login-box input[type="password"].invalid {
+.main .container .login-box .float-label input[type="text"].invalid,
+.main .container .login-box .float-label input[type="email"].invalid,
+.main .container .login-box .float-label input[type="password"].invalid {
   border-bottom: 2px solid #EC644B;
   color: #EC644B;
 }
 
+.main .container .login-box .float-label label {
+  color: #3f8ea8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  padding: 4px 0;
+  cursor: text;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.main .container .login-box .float-label label.top {
+  font-size: 10px;
+  transform: translateY(-100%);
+}
+
 .main .container .login-box .checkbox {
-  margin-top: 20px;
-  display: block;
+  margin: 0 0 20px;
+  display: inline-block;
   cursor: pointer;
   padding-left: 25px;
   position: relative;

@@ -16,12 +16,20 @@
 					<h3>Login</h3>
 					<div ng-hide="isLoading">
 						<form name="loginForm">
-							<input type="email" placeholder="E-mail" name="email" 
-								ng-model="email" required 
-								ng-class="{invalid : loginForm.email.$touched && loginForm.email.$invalid}"/>
-							<input type="password" placeholder="Senha" name="password" 
-								ng-model="password" required minlength="6"
+							<div class="float-label">
+								<input type="email" name="email" 
+									ng-model="email" required id="email"
+									ng-class="{invalid : loginForm.email.$touched && loginForm.email.$invalid}"/>
+								<label for="email"
+								ng-class="{top : (loginForm.email.$viewValue != undefined && loginForm.email.$viewValue != '')}">E-mail</label>
+							</div>
+							<div class="float-label">
+							<input type="password" name="password" 
+								ng-model="password" required minlength="6" id="password"
 								ng-class="{invalid : loginForm.password.$touched && loginForm.password.$invalid}"/>
+								<label for="password"
+								ng-class="{top : (loginForm.password.$viewValue != undefined && loginForm.password.$viewValue != '')}">Senha</label>
+							</div>
 							<label class="checkbox"><input type="checkbox" /> <span></span>Mantenha-me conectado</label>
 							<input type="button" ng-click="login()" value="Entrar" />
 						</form>

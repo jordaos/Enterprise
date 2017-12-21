@@ -59,28 +59,44 @@ html, body
                 text-align: center
                 margin: 10px 0 0
 
-            input
-                margin-top: 35px
+            .float-label
+                position: relative
+                margin: 30px 0
             
-            input[type="text"],
-            input[type="email"],
-            input[type="password"]
-                width: 100%
-                border: none
-                color: #3f8ea8
-                font-size: 16px
-                border-bottom: 2px solid $primaryColor
-                padding: 4px 0
-                box-sizing: border-box
-                outline: none
+                input[type="text"],
+                input[type="email"],
+                input[type="password"]
+                    width: 100%
+                    border: none
+                    color: #3f8ea8
+                    font-size: 16px
+                    border-bottom: 2px solid $primaryColor
+                    padding: 4px 0
+                    box-sizing: border-box
+                    outline: none
 
-                &.invalid
-                    border-bottom: 2px solid #EC644B
-                    color: #EC644B
+                    &.invalid
+                        border-bottom: 2px solid #EC644B
+                        color: #EC644B
+
+                label
+                    color: #3f8ea8
+                    position: absolute
+                    top: 0
+                    left: 0
+                    font-size: 16px
+                    padding: 4px 0
+                    cursor: text
+                    -webkit-transition: all 0.25s ease
+                    transition: all 0.25s ease
+
+                    &.top
+                        font-size: 10px
+                        transform: translateY(-100%)
 
             .checkbox
-                margin-top: 20px
-                display: block
+                margin: 0 0 20px
+                display: inline-block
                 cursor: pointer
                 padding-left: 25px
                 position: relative

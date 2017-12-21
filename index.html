@@ -8,63 +8,65 @@
 	<link rel="stylesheet" href="src/css/style.css" />
 </head>
 <body ng-controller="login">
-    <div class="main">
-    	<div class="container">
-			<h1 class="company-name">Enter<span>prise!</span></h1>
-			<div class="login-box">
-				<h3>Login</h3>
-				<div ng-hide="isLoading">
-					<form name="loginForm">
-						<input type="email" placeholder="E-mail" name="email" 
-							ng-model="email" required 
-							ng-class="{invalid : loginForm.email.$touched && loginForm.email.$invalid}"/>
-						<input type="password" placeholder="Senha" name="password" 
-							ng-model="password" required minlength="6"
-							ng-class="{invalid : loginForm.password.$touched && loginForm.password.$invalid}"/>
-						<label class="checkbox"><input type="checkbox" /> <span></span>Mantenha-me conectado</label>
-						<input type="button" ng-click="login()" value="Entrar" />
-					</form>
+	<div class="page">
+		<div class="main">
+			<div class="container">
+				<h1 class="company-name">Enter<span>prise!</span></h1>
+				<div class="login-box">
+					<h3>Login</h3>
+					<div ng-hide="isLoading">
+						<form name="loginForm">
+							<input type="email" placeholder="E-mail" name="email" 
+								ng-model="email" required 
+								ng-class="{invalid : loginForm.email.$touched && loginForm.email.$invalid}"/>
+							<input type="password" placeholder="Senha" name="password" 
+								ng-model="password" required minlength="6"
+								ng-class="{invalid : loginForm.password.$touched && loginForm.password.$invalid}"/>
+							<label class="checkbox"><input type="checkbox" /> <span></span>Mantenha-me conectado</label>
+							<input type="button" ng-click="login()" value="Entrar" />
+						</form>
 
-					<p class="error_message" ng-hide="!error.show"> {{error.message}} </p>
-				</div>
+						<p class="error_message" ng-hide="!error.show"> {{error.message}} </p>
+					</div>
 
-				<div ng-hide="!isLoading" class="loading">
-					<span></span>
-					<label>Carregando...</label>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="footer">
-		<div class="container">
-			<div class="col-25">
-				<div class="footer-col present">
-					<div class="text-centered-y">
-						<h1>This is <span>Enterprise!</span></h1>
-						<h3>All your problems solved.</h3>
+					<div ng-hide="!isLoading" class="loading">
+						<span></span>
+						<label>Carregando...</label>
 					</div>
 				</div>
 			</div>
-			<div class="col-25">
-				<div class="footer-col">
-					<h2>Lorem Ipsum</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
-					<input type="button" value="Lorem Ipsum" />
+		</div>
+
+		<div class="footer">
+			<div class="container">
+				<div class="col-25">
+					<div class="footer-col present">
+						<div class="text-centered-y">
+							<h1>This is <span>Enterprise!</span></h1>
+							<h3>All your problems solved.</h3>
+						</div>
+					</div>
 				</div>
-			</div>
-			<div class="col-25">
-				<div class="footer-col">
-					<h2>Lorem Ipsum</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
-					<input type="button" value="Lorem Ipsum" />
+				<div class="col-25">
+					<div class="footer-col">
+						<h2>Lorem Ipsum</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+						<input type="button" value="Lorem Ipsum" />
+					</div>
 				</div>
-			</div>
-			<div class="col-25">
-				<div class="footer-col">
-					<h2>Lorem Ipsum</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-					<input type="button" value="Lorem Ipsum" />
+				<div class="col-25">
+					<div class="footer-col">
+						<h2>Lorem Ipsum</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+						<input type="button" value="Lorem Ipsum" />
+					</div>
+				</div>
+				<div class="col-25">
+					<div class="footer-col">
+						<h2>Lorem Ipsum</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<input type="button" value="Lorem Ipsum" />
+					</div>
 				</div>
 			</div>
 		</div>

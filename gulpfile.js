@@ -1,7 +1,5 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
-    nodemon = require('gulp-nodemon'),
-    notify = require("gulp-notify"),
     browserSync = require('browser-sync').create();
 
 gulp.task('default', function() {
